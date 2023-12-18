@@ -36,3 +36,158 @@
     transform: rotate(360deg);
   }
 }
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 1em;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-results li {
+  margin: 0.5em 0;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.search-results li:hover {
+  transform: scale(1.02);
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.7em;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+.search-results {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+.post-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.post-metadata {
+  color: #666;
+  font-size: 0.9rem;
+}
+/* .post-details {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2em;
+  margin-top: 2em;
+} */
+
+.post-title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.post-metadata {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.comment-content {
+  font-size: 1rem;
+  line-height: 1.5;
+}
