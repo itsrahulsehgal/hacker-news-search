@@ -6,7 +6,7 @@ const Search = ({ onSearchResults }) => {
   
     const handleSearch = async () => {
       try {
-        const response = await axios.get(`http://hn.algolia.com/api/v1/search?query=${query}`);
+        const response = await axios.get(`https://hn.algolia.com/api/v1/search?query=${query}`);
         onSearchResults(response.data.hits);
       } catch (error) {
         console.error('Error fetching search results:', error);
