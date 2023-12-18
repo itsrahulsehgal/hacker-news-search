@@ -9,7 +9,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://hn.algolia.com/api/v1/items/${objectId}`);
+        const response = await axios.get(`https://hn.algolia.com/api/v1/items/${objectId}`);
         setPost(response.data);
       } catch (error) {
         console.error('Error fetching post details:', error);
