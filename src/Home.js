@@ -1,7 +1,10 @@
+// Home.js
 import React from 'react';
 import Search from './Search';
-import SearchResults from './SearchResults';
 import { auth } from './firebase';
+import SearchResults from './SearchResults';
+import { Link } from 'react-router-dom';
+import './App.css'; // Make sure to import your CSS file
 
 const Home = ({ onSearchResults, searchResults }) => {
   const handleSignOut = async () => {
@@ -15,14 +18,21 @@ const Home = ({ onSearchResults, searchResults }) => {
 
   return (
     <div className="home-container">
-      <div className="header">
-        <div className="flex-container">
+      <header className="header-box">
+        <div className="navbar">
           <Search onSearchResults={onSearchResults} />
-          <button className="sign-out-button" onClick={handleSignOut}>
-            Sign Out
-          </button>
+
+          <div className="nav-links">
+            <Link to="/favorites" className="nav-link">
+              Go to Favorites
+            </Link>
+            <button className="nav-button" onClick={handleSignOut}>
+              Sign Out
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
+
       <SearchResults results={searchResults} />
     </div>
   );

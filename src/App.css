@@ -253,3 +253,76 @@ a:hover {
   margin-left: 10px; 
   cursor: pointer;
 }
+.header-box {
+  background-color: white;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link,
+.nav-button {
+  padding: 8px;
+  border: none;
+  background-color: transparent; 
+}
+
+.nav-button {
+  color: white;
+  background-color: red;
+}
+
+.nav-button:hover {
+  background-color: #880808;
+}
+/* Favorites.css */
+.favorites-container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.favorite-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.favorite-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.favorite-author {
+  color: #555;
+}
+.favorite-button {
+  background-color: transparent;
+  color: #ff7b7b;
+  border: 2px solid #ff7b7b;
+  border-radius: 50%;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.favorite-button.favorited {
+  background-color: #ff7b7b;
+  color: white;
+}

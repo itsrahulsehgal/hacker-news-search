@@ -21,7 +21,7 @@ const SignIn = ({ onSignInSuccess }) => {
         onSignInSuccess();
       }
 
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       console.error('Error signing in:', error.message);
       setError('Invalid email or password. Please try again.');

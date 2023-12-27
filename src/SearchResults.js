@@ -1,8 +1,19 @@
-import React from 'react';
+// SearchResults.js
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './App.css'
+import { addToFavorites } from './firebase';
+import './App.css';
 
 const SearchResults = ({ results }) => {
+  const [favorites, setFavorites] = useState([]);
+
+  const handleAddToFavorites = (article) => {
+    addToFavorites(article);
+    setFavorites((prevFavorites) => [...prevFavorites, article.objectID]);
+  };
+
+  const isFavorite = (objectId) => favorites.includes(objectId);
+
   return (
     <ul className="search-results">
       {results.map((result) => (
@@ -13,6 +24,12 @@ const SearchResults = ({ results }) => {
           <p className="post-metadata">
             Points: {result.points} | Author: {result.author} | Comments: {result.num_comments}
           </p>
+          <button
+            className={`favorite-button ${isFavorite(result.objectID) ? 'favorited' : ''}`}
+            onClick={() => handleAddToFavorites(result)}
+          >
+            ❤
+          </button>
         </li>
       ))}
     </ul>
