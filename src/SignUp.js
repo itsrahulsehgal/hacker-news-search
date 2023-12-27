@@ -12,12 +12,6 @@ const SignUp = ({ onSignUpSuccess }) => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-
-    if (!passwordRegex.test(password)) {
-      setError('Password must contain at least 8 characters, including one uppercase letter and one digit.');
-      return;
-    }
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
